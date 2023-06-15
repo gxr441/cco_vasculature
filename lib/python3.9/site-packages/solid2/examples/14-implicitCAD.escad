@@ -1,0 +1,64 @@
+
+
+
+
+union(r = 3) {
+	union(r = 10) {
+		cube(center = true, r = 10, size = [100, 250, 50]);
+		translate(v = [0, 0, 50]) {
+			difference(r = 10) {
+				cube(center = true, r = 10, size = [80, 100, 60]);
+				union(r = 10) {
+					translate(v = [0, 0, -10]) {
+						cube(center = true, r = 10, size = [200, 55, 50]);
+					}
+					rotate(a = [0, 0, 90]) {
+						translate(v = [0, 0, -10]) {
+							cube(center = true, r = 10, size = [200, 55, 50]);
+						}
+					}
+				}
+			}
+		}
+	}
+	translate(v = [0, -80, 0]) {
+		translate(v = [0, 0, -20]) {
+			union() {
+				translate(v = [-67, 0, 0]) {
+					rotate(a = [0, 90, 0]) {
+						cylinder(center = true, h = 15, r = 35);
+					}
+				}
+				translate(v = [67, 0, 0]) {
+					rotate(a = [0, 90, 0]) {
+						cylinder(center = true, h = 15, r = 35);
+					}
+				}
+				rotate(a = [0, 90, 0]) {
+					cylinder(center = true, h = 130, r = 10);
+				}
+			}
+		}
+	}
+	translate(v = [0, 160, 0]) {
+		translate(v = [0, -80, 0]) {
+			translate(v = [0, 0, -20]) {
+				union() {
+					translate(v = [-67, 0, 0]) {
+						rotate(a = [0, 90, 0]) {
+							cylinder(center = true, h = 15, r = 35);
+						}
+					}
+					translate(v = [67, 0, 0]) {
+						rotate(a = [0, 90, 0]) {
+							cylinder(center = true, h = 15, r = 35);
+						}
+					}
+					rotate(a = [0, 90, 0]) {
+						cylinder(center = true, h = 130, r = 10);
+					}
+				}
+			}
+		}
+	}
+}

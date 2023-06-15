@@ -1,0 +1,59 @@
+
+
+
+
+union() {
+	linear_extrude(height = 30, r = 2, twist = 180) {
+		union(r = 2) {
+			square(r = 2, x = [-2, 2], y = [-10, 10]);
+			square(r = 2, x = [-10, 10], y = [-2, 2]);
+		}
+	}
+	translate(v = [-50, 0, 0]) {
+		rotate(a = [0, 0, 90]) {
+			linear_extrude(height = 40, twist(h) = 90*cos(h*2*pi/40)) {
+				difference() {
+					shell(w = 2) {
+						circle(r = 10);
+					}
+					square(x = [0, 20], y = [-4, 4]);
+				}
+			}
+		}
+	}
+	translate(v = [50, 0, 0]) {
+		union() {
+			cylinder($fn = 6, center = true, h = 10, r = 19);
+			cylinder(h = 40, r = 10);
+			rotate_extrude(a = 1440, translate = [0, 38]) {
+				translate(v = [10, 0]) {
+					square(center = true, size = [8, 4]);
+				}
+			}
+		}
+	}
+	translate(v = [-100, 0, 0]) {
+		linear_extrude(height(x, y) = 10 + 5*cos(x) + 5*cos(y)) {
+			circle(r = 10);
+		}
+	}
+	translate(v = [130, 0, 0]) {
+		linear_extrude(height = 40, twist(h) = 35*cos(h*2*pi/60)) {
+			union(r = 8) {
+				circle(r = 10);
+				translate(v = [22, 0]) {
+					circle(r = 10);
+				}
+				translate(v = [0, 22]) {
+					circle(r = 10);
+				}
+				translate(v = [-22, 0]) {
+					circle(r = 10);
+				}
+				translate(v = [0, -22]) {
+					circle(r = 10);
+				}
+			}
+		}
+	}
+}
