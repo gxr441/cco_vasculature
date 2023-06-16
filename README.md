@@ -26,7 +26,7 @@ CORE\_COUNT - Constant for WIP parallelism mechanism. Parallel processing is cur
 - Run 'cli.py'
 - Exported output is stored in 'test.scad'
 - Open 'test.scad' in OpenSCAD
-###### Sample images found in 'sample_images'
+#### Sample images found in 'sample_images'
 
 
 ### The license:
