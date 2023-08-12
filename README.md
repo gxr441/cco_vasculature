@@ -2,12 +2,6 @@
 
 ## WIP Implementation of vasculature tree generation based on the 1993 paper of Schreiner et al.
 
-## License
-
-This software is licensed under GNU General Public License v3.0
-
-You are free to use this in a lot of ways 'free of charge', subject to certain limitations put down by the license.
-
 ### Model Constants(constants.py)
 The model constants can be changed as needed.  
 ###### Description
